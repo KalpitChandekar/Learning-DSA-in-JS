@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search position of the element</title>
+  </head>
+  <body>
+    <h1>
+      Choose from below numbers -
+      <br />
+      13, 46, 24, 75, 30, 57, 61, 49, 37
+    </h1>
+    <input type="text" placeholder="Enter number" id="enterEl" />
+    <button onclick="enterElement()">Check position</button>
+  </body>
+  <script>
+    function enterElement() {
+      let data = [13, 46, 24, 75, 30, 57, 61, 49, 37];
+      let item = document.getElementById("enterEl").value;
+      let index = undefined;
+
+      for (let i = 0; i <= data.length - 1; i++) {
+        if (data[i] === parseInt(item)) {
+          index = i;
+          break;
+        }
+      }
+      alert("The position of the number is " + + index);
+    }
+  </script>
+</html>
