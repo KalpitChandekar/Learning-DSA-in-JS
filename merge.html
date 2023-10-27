@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>merge two arrays</title>
+  </head>
+  <body></body>
+  <script>
+    let array = [1, 2, 3, 4, 5, 6];
+    let array2 = [7, 8, 9, 10, 11];
+    let array3 = [];
+
+    for (i = 0; i < array.length; i++) {
+      array3[i] = array[i];
+    }
+
+    for (i = 0; i < array.length-1; i++) {
+      array3[array.length + i] = array2[i];
+    }
+    console.log(array3);
+  </script>
+</html>
