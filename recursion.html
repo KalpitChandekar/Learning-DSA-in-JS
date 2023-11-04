@@ -9,13 +9,21 @@
     <h1>Recursion</h1>
   </body>
   <script>
-    function banana(x) {
-      console.log(x);
-      if (x < 100) {
-        banana(x + 10);
+    // function banana(x) {
+    //   console.log(x);
+    //   if (x < 100) {
+    //     banana(x + 10);
+    //   }
+    // }
+    // let data = 0;
+    // banana(data);
+    function fact(value) {
+      if (value == 0) {
+        return 1;
       }
+      return value * fact(value - 1);
     }
-    let data = 0;
-    banana(data);
+    let data = 6;
+    console.log(fact(data));
   </script>
 </html>
