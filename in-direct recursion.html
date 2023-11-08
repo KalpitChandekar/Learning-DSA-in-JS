@@ -12,16 +12,17 @@
 
     function buyApple(x) {
       if (x > 0) {
-        console.log("I have", x, "Rs", "&", apple, "Apple");
-        buyMore(x);
+        console.log("I have", x, "Rs &", apple, "apple");
+        apple++;
+        buyApple(x - 20);
       } else {
-        console.log("I don't have more money", "but I have", apple, "Apple");
+        console.log("I don't have more money", "but I have", apple, "apple");
       }
     }
-    function buyMore(x) {
-      apple++;
-      buyApple(x - 20);
-    }
+    // function buyMore(x) {
+    //     apple++;
+    //     buyApple(x - 20);
+    // }
 
     buyApple(money);
   </script>
