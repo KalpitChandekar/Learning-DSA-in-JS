@@ -9,11 +9,11 @@
     <h1>Linear Search</h1>
   </body>
   <script>
-    let data = [76, 89, 3, 44, 55, 67, 2, 34, 8, 90, 12, 43, 76, 80, 90];
-    let find = 80;
+    let data = [76, 89, 3, 44, 56, 55, 67, 2, 34, 8, 12, 43, 76, 80, 90];
+    let find = 56;
     let pos = undefined;
 
-    for (let i = 0; i <= data.length; i++) {
+    for (i = 0; i < data.length; i++) {
       if (data[i] == find) {
         pos = i;
         break;
