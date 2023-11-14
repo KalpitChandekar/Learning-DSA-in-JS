@@ -6,19 +6,29 @@
     <title>Linear Search</title>
   </head>
   <body>
-    <h1>Linear Search</h1>
+    <h1>Find the position of the element In Array</h1>
+    <h2>Choose One number from below</h2>
+    <h1>[76, 89, 53, 44, 56, 55, 67, 62, 34, 8, 12, 43, 76, 80, 90]</h1>
+    <br />
+    <input type="text" placeholder="Enter Number" id="number" />
+    <button onclick="findIndex()">Find Index</button>
   </body>
   <script>
-    let data = [76, 89, 3, 44, 56, 55, 67, 2, 34, 8, 12, 43, 76, 80, 90];
-    let find = 56;
+    let data = [76, 89, 53, 44, 56, 55, 67, 62, 34, 8, 12, 43, 76, 80, 90];
     let pos = undefined;
 
-    for (i = 0; i < data.length; i++) {
-      if (data[i] == find) {
-        pos = i;
-        break;
+    function findIndex() {
+      let find = document.getElementById("number").value;
+      for (i = 0; i < data.length; i++) {
+        if (data[i] == find) {
+          pos = i;
+          break;
+        }
       }
+      if (!pos) {
+        alert("Element is not found");
+      }
+      console.log(pos);
     }
-    console.log(pos);
   </script>
 </html>
