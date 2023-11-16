@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selection Sorting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sorting</h1>
+  <input
+    type="text"
+    placeholder="Enter numbers with spaces"
+    id="num"
+  />
+  <button onclick="shorting()">Sort</button>
+  <p id="result"></p>
+</body>
+<script>
+  function shorting() {
+    let input = document.getElementById("num").value;
+    let numbers = input.split(' ').map(Number); // Split string input and convert to array of numbers
+    for (let i = 0; i < numbers.length; i++) {
+      let min = i;
+      for (let j = i + 1; j < numbers.length; j++) {
+        if (numbers[j] < numbers[min]) {
+          min = j;
+        }
+      }
+      let temp = numbers[min];
+      numbers[min] = numbers[i];
+      numbers[i] = temp;
+    }
+    document.getElementById("result").innerText = "Sorted Numbers: " + numbers.join(', ');
+  }
+</script>
+</html>
