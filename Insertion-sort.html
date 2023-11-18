@@ -15,13 +15,14 @@
       let i, current, j;
 
       for (i = 1; i < data.length; i++) {
-        current = item[i];
+        current =item[i] ;
         j = i - 1;
-        while (j >= 0 && item[j] > current) {
-          data[j + 1] = data[j];
+
+        while (j >= 0 && item[j] >= current) {
+          item[j + 1] = item[j];
           j--;
         }
-        data[j + 1] = current;
+        item[j + 1] = current;
       }
     }
     insertionSort(data);
