@@ -9,18 +9,24 @@
     <h1>Object</h1>
   </body>
   <script>
-    let data = {
-      name: "kalpit",
-      age: 18,
-      gmail: "kalpitchandekar@gmail.com",
-    };
+    let data = [
+      {
+        name: "kalpit",
+        age: 18,
+        gmail: "kalpitchandekar@gmail.com",
+      },
+      {
+        name: "karan",
+        age: 20,
+      },
+    ];
 
     // for (x in data) {
     //   console.log(x );
     // }
     // console.log(Object.values(data));
     // console.log(Object.entries(data));
-    // console.log(Object.keys(data));
-    console.log(data);
+    console.log(Object.keys(data[0]));
+    // console.log(data);
   </script>
 </html>
